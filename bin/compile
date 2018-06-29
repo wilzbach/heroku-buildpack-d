@@ -48,7 +48,7 @@ ${LD:-ld} -v | indent
 cd "$BUILD_DIR"
 echo "-----> Building application with dub"
 
-dub build -b release --compiler=$DC 2>&1 | indent
+dub build --compiler=$DC 2>&1 | indent
 dub clean
 
 if [ ! -f Procfile ]; then
